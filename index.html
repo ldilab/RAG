@@ -32,6 +32,9 @@
       <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="gitd">
         <i class="fab fa-github"></i><span> Decompose</span>
       </div>
+            <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="gitgd">
+        <i class="fab fa-github"></i><span> Grounded Decompose</span>
+      </div>
          <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="gitv">
         <i class="fab fa-github"></i><span> Verify</span>
       </div>
@@ -285,6 +288,16 @@
           </div>
           `;
           editor.addNode('gitd', 1,3, pos_x, pos_y, 'gitd', { "name": ''}, githubtemplate );
+          break;
+                  case 'gitgd':
+          var githubtemplate = `
+          <div>
+            <div class="title-box"><i class="fab fa-github "></i> Query decompose</div>
+
+            </div>
+          </div>
+          `;
+          editor.addNode('gitgd', 2,2, pos_x, pos_y, 'gitgd', { "name": ''}, githubtemplate );
           break;
                   case 'gitv':
           var githubtemplate = `
