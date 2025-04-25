@@ -29,10 +29,10 @@
    <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="template">
         <i class="fas fa-code"></i><span> Generator</span>
       </div>
-      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="github">
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="gitd">
         <i class="fab fa-github"></i><span> Decompose</span>
       </div>
-         <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="github">
+         <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="gitv">
         <i class="fab fa-github"></i><span> Verify</span>
       </div>
            <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="dbclick">
@@ -276,7 +276,7 @@
           `
           editor.addNode('slack', 1, 0, pos_x, pos_y, 'slack', {}, slackchat );
           break;
-        case 'github':
+        case 'gitd':
           var githubtemplate = `
           <div>
             <div class="title-box"><i class="fab fa-github "></i> Query decompose</div>
@@ -284,7 +284,17 @@
             </div>
           </div>
           `;
-          editor.addNode('github', 0, 1, pos_x, pos_y, 'github', { "name": ''}, githubtemplate );
+          editor.addNode('gitd', 1,3, pos_x, pos_y, 'gitd', { "name": ''}, githubtemplate );
+          break;
+                  case 'gitv':
+          var githubtemplate = `
+          <div>
+            <div class="title-box"><i class="fab fa-github "></i> Verify</div>
+
+            </div>
+          </div>
+          `;
+          editor.addNode('gitv', 3, 1, pos_x, pos_y, 'gitv', { "name": ''}, githubtemplate );
           break;
         case 'telegram':
           var telegrambot = `
