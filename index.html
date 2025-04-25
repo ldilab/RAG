@@ -275,10 +275,8 @@
         case 'github':
           var githubtemplate = `
           <div>
-            <div class="title-box"><i class="fab fa-github "></i> Generator</div>
-            <div class="box">
-              <p>Enter repository url</p>
-            <input type="text" df-name>
+            <div class="title-box"><i class="fab fa-github "></i> Query decompose</div>
+
             </div>
           </div>
           `;
@@ -346,12 +344,12 @@
             <div>
               <div class="title-box"><i class="fas fa-code"></i> Generator</div>
               <div class="box">
-                Answer
+                Your question
                 <textarea df-template></textarea>
               </div>
             </div>
             `;
-            editor.addNode('template', 1, 1, pos_x, pos_y, 'template', { "template": 'Write your template'}, template );
+            editor.addNode('template', 1, 1, pos_x, pos_y, 'template', { "template": 'Answer to query'}, template );
             break;
           case 'multiple':
             var multiple = `
